@@ -338,8 +338,7 @@ export const DEFAULT_SYNTH_OPTIONS = {
         },
       ],
     },
-    // Enable feature flags for all integ tests
-    ...FUTURE_FLAGS,
+    '@aws-cdk/aws-ecr-assets:dockerIgnoreSupport': true,
   },
   env: {
     CDK_INTEG_ACCOUNT: '12345678',

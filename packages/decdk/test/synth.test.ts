@@ -32,11 +32,7 @@ for (const templateFile of fs.readdirSync(dir)) {
     const template = await readTemplate(path.resolve(dir, templateFile));
     const typeSystem = await obtainTypeSystem();
 
-    const app = new cdk.App({
-      context: {
-        ...FUTURE_FLAGS,
-      }
-    });
+    const app = new cdk.App();
     const stackName = stackNameFromFileName(templateFile);
 
     new DeclarativeStack(app, stackName, {
